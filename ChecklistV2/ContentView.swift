@@ -11,11 +11,27 @@ struct ContentView: View {
     var body: some View {
         NavigationView{
             List {
-                Text("Walk the dog")
-                Text("Brush my teeth")
-                Text("Learn iOS development")
-                Text("Soccer practice")
-                Text("Eat ice cream")
+                Section(header: Text("High priority")){
+                    Group{
+                        Text("Walk the dog")
+                        Text("Brush my teeth")
+                        Text("Learn iOS development")
+                        Text("Make dinner")
+                        Text("Do laundry")
+                        Text("Pay bills")
+                    }
+                    Group{
+                        Text("Finish homework")
+                        Text("Change internet provider")
+                        Text("Clean the kitchen")
+                        Text("Wash the car")
+                        Text("Wash the hair")
+                    }
+                }
+                Section(header: Text("Low priority")){
+                    Text("Soccer practice")
+                    Text("Eat ice cream")
+                }
             }//End of list
             .navigationBarTitle("CheckList")
         }// End of navigationview
