@@ -39,10 +39,21 @@ struct ContentView: View {
                         } else {
                             Text("⬛️")
                         }*/
+                    }// End of HStack
+                    .background(Color.white)    //그 줄의 어딜 눌러도 clickable
+                    .onTapGesture {
+                        if let matchingIndex = self.checklistItems.firstIndex(where: {
+                            $0.id == checklistItem.id
+                        }){
+                            self.checklistItems[matchingIndex].isChecked.toggle()
+                        }
+                        self.printChecklistContent()
                     }
+                    
                 }//End of ForEach
                 .onDelete(perform: deleteListItem)
                 .onMove(perform: moveListItem)
+                
             }//End of list
             .navigationBarItems(trailing: EditButton())
             .navigationBarTitle("CheckList")
