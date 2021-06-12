@@ -16,8 +16,8 @@ struct ChecklistView: View {
         NavigationView{
             List {
                 ForEach(checklist.items){
-                    checklistItem in
-                    RowView(checklistItem: checklistItem)
+                    index in
+                    RowView(checklistItem: self.$checklist.items[index])
                     
                 }//End of ForEach
                 .onDelete(perform: checklist.deleteListItem)
