@@ -22,7 +22,7 @@ struct NewChecklistItemView: View {
                 Button(action: {
                     let newChecklistItem = ChecklistItem(name: self.newItemName)
                     self.checklist.items.append(newChecklistItem)
-                    self.checklist.printChecklistContent()
+                    //self.checklist.printChecklistContent()
                     self.presentationMode.wrappedValue.dismiss()
                 }) {
                     HStack {
@@ -34,6 +34,12 @@ struct NewChecklistItemView: View {
             } //end of Form
             Text("Swipe down to cancel.")
         }//end of VStack
+        .onAppear() {
+            print("NewChecklistItemView has appeared!")
+        }
+        .onDisappear() {
+            print("NewChecklistItemView has disappeared!")
+        }
     }//end of body
 }
 

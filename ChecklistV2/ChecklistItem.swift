@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ChecklistItem: Identifiable {    //unique한 이름이 필요함
+struct ChecklistItem: Identifiable, Codable {    //unique한 이름이 필요함
     let id = UUID()     //unidue한 id
     var name: String
     var isChecked: Bool = false

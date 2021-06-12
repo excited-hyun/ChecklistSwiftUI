@@ -33,14 +33,33 @@ struct ChecklistView: View {
                 }
                 ,trailing: EditButton())
             .navigationBarTitle("CheckList", displayMode: .inline)
-            .onAppear(){
-                self.checklist.printChecklistContent()
-            }
+            //.onAppear(){
+              //  self.checklist.printChecklistContent()
+            //}
         }// End of navigationview
         .sheet(isPresented: $newChecklistItemViewIsVisible) {
             //Text("New item screen coming soon!")
             NewChecklistItemView(checklist: self.checklist)
         } //display pop up
+        .onAppear() {
+            print("ChecklistView has appeared!")
+        }
+        .onDisappear() {
+            print("ChecklistView has disappeared!")
+        }
+        .onReceive(NotificationCenter.default.publisher(for: UIApplication.willResignActiveNotification)) {
+            _ in print("willResignActionNotification")
+            self.checklist.saveChecklistItem()
+        }
+        .onReceive(NotificationCenter.default.publisher(for: UIApplication.didEnterBackgroundNotification)) {
+            _ in print("didEnterBackgroundNotification")
+        }
+        .onReceive(NotificationCenter.default.publisher(for: UIApplication.willEnterForegroundNotification)) {
+            _ in print("willEnterForegroundNotification")
+        }
+        .onReceive(NotificationCenter.default.publisher(for: UIApplication.didBecomeActiveNotification)) {
+            _ in print("didBecomeActiveNotification")
+        }
     }//end of body
     
     
