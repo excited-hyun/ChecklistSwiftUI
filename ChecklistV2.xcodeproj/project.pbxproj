@@ -17,6 +17,7 @@
 		309A095B2668C94B00E11E3C /* Checklist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309A095A2668C94B00E11E3C /* Checklist.swift */; };
 		309A095D2668CDF700E11E3C /* EditChecklistItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309A095C2668CDF700E11E3C /* EditChecklistItemView.swift */; };
 		30DC6617267501D30065DC73 /* NewChecklistItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DC6616267501D30065DC73 /* NewChecklistItemView.swift */; };
+		30DC661926750A910065DC73 /* RowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DC661826750A910065DC73 /* RowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		309A095A2668C94B00E11E3C /* Checklist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checklist.swift; sourceTree = "<group>"; };
 		309A095C2668CDF700E11E3C /* EditChecklistItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditChecklistItemView.swift; sourceTree = "<group>"; };
 		30DC6616267501D30065DC73 /* NewChecklistItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewChecklistItemView.swift; sourceTree = "<group>"; };
+		30DC661826750A910065DC73 /* RowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				30451593265F724300BFC509 /* AppDelegate.swift */,
+				30DC661826750A910065DC73 /* RowView.swift */,
 				30451595265F724300BFC509 /* SceneDelegate.swift */,
 				309A095C2668CDF700E11E3C /* EditChecklistItemView.swift */,
 				30451597265F724300BFC509 /* ChecklistView.swift */,
@@ -160,6 +163,7 @@
 				309A095B2668C94B00E11E3C /* Checklist.swift in Sources */,
 				30451594265F724300BFC509 /* AppDelegate.swift in Sources */,
 				30451596265F724300BFC509 /* SceneDelegate.swift in Sources */,
+				30DC661926750A910065DC73 /* RowView.swift in Sources */,
 				30451598265F724300BFC509 /* ChecklistView.swift in Sources */,
 				309A095D2668CDF700E11E3C /* EditChecklistItemView.swift in Sources */,
 				30DC6617267501D30065DC73 /* NewChecklistItemView.swift in Sources */,

@@ -17,26 +17,7 @@ struct ChecklistView: View {
             List {
                 ForEach(checklist.items){
                     checklistItem in
-                    HStack{
-                        Text(checklistItem.name)
-                        Spacer()
-                        Text(checklistItem.isChecked ? "✅" : "⬛️")
-                        /*
-                        if checklistItem.isChecked {
-                            Text("✅")
-                        } else {
-                            Text("⬛️")
-                        }*/
-                    }// End of HStack
-                    .background(Color.white)    //그 줄의 어딜 눌러도 clickable
-                    .onTapGesture {
-                        if let matchingIndex = self.checklist.items.firstIndex(where: {
-                            $0.id == checklistItem.id
-                        }){
-                            self.checklist.items[matchingIndex].isChecked.toggle()
-                        }
-                        self.checklist.printChecklistContent()
-                    }
+                    RowView(checklistItem: checklistItem)
                     
                 }//End of ForEach
                 .onDelete(perform: checklist.deleteListItem)
