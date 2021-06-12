@@ -56,6 +56,10 @@ struct ChecklistView: View {
                 self.checklist.printChecklistContent()
             }
         }// End of navigationview
+        .sheet(isPresented: $newChecklistItemViewIsVisible) {
+            //Text("New item screen coming soon!")
+            NewChecklistItemView()
+        } //display pop up
     }//end of body
     
     
