@@ -10,6 +10,7 @@ import SwiftUI
 struct ChecklistView: View {
     //@State var checklist.checklistItems = ["Walk the dog","Brush my teeth", "Learn iOS development", "Soccer practice", "Eat ice cream"]
     @ObservedObject var checklist = Checklist()
+    @State var newChecklistItemViewIsVisible = false
     
     var body: some View {
         NavigationView{
@@ -42,7 +43,14 @@ struct ChecklistView: View {
                 .onMove(perform: checklist.moveListItem)
                 
             }//End of list
-            .navigationBarItems(trailing: EditButton())
+            .navigationBarItems(
+                leading: Button(action: { self.newChecklistItemViewIsVisible = true}){
+                    HStack{
+                        Image(systemName: "plus.circle.fill")
+                        Text("Add item")
+                    } //HStack
+                }
+                ,trailing: EditButton())
             .navigationBarTitle("CheckList")
             .onAppear(){
                 self.checklist.printChecklistContent()
