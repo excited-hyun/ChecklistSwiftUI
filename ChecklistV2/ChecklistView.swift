@@ -51,7 +51,7 @@ struct ChecklistView: View {
                     } //HStack
                 }
                 ,trailing: EditButton())
-            .navigationBarTitle("CheckList")
+            .navigationBarTitle("CheckList", displayMode: .inline)
             .onAppear(){
                 self.checklist.printChecklistContent()
             }
